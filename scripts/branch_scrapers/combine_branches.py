@@ -13,7 +13,7 @@ class BranchCombiner:
     """Combines all bank branch CSV files into one unified file."""
 
     DATA_DIR = "data"
-    OUTPUT_FILE = "data/combined_atms.csv"
+    OUTPUT_FILE = "data/combined_branches.csv"
 
     # Mapping of CSV files to bank names
     BANK_FILES = {
