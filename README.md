@@ -1,8 +1,8 @@
 # Bank of Baku — Strategic Branch & Transit Intelligence Report
 
-> **Audience:** Executive leadership, Strategy, Retail Network Planning
-> **Data scope:** 585 bank branches across 20 banks, 3,834 bus stops, 208 bus routes in Azerbaijan
-> **Focus:** Bank of Baku (BOB) competitive positioning, public transit accessibility, and expansion opportunities
+> - **Audience:** Executive leadership, Strategy, Retail Network Planning
+> - **Data scope:** 585 bank branches across 20 banks, 3,834 bus stops, 208 bus routes in Azerbaijan
+> - **Focus:** Bank of Baku (BOB) competitive positioning, public transit accessibility, and expansion opportunities
 
 ---
 
