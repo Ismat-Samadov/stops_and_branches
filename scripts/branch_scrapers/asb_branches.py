@@ -4,6 +4,7 @@ ASB (Azerbaijan Savings Bank) Branch Scraper
 Fetches branch data from ASB's website and saves to CSV.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -11,12 +12,15 @@ import re
 import html
 from typing import List, Dict
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class ASBScraper:
     """Scraper for ASB Bank branch locations."""
 
     PAGE_URL = "https://www.asb.az/az/filiallar"
-    OUTPUT_FILE = "data/asb_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "asb_branches.csv")
 
     def __init__(self):
         self.branches = []

@@ -4,6 +4,7 @@ BTB (Baku Business Bank) Azerbaijan Branch Scraper
 Fetches branch data from BTB's website and saves to CSV.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -11,12 +12,15 @@ import time
 import re
 from typing import List, Dict, Tuple, Optional
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class BTBScraper:
     """Scraper for BTB branch locations."""
 
     PAGE_URL = "https://www.btb.az/az/officees"
-    OUTPUT_FILE = "data/btb_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "btb_branches.csv")
 
     def __init__(self):
         self.branches = []

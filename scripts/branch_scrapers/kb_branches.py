@@ -4,6 +4,7 @@ Kapital Bank Branch Scraper
 Fetches branch data from Kapital Bank's website and saves to CSV.
 """
 
+import os
 import aiohttp
 import asyncio
 import csv
@@ -11,12 +12,15 @@ import re
 import json
 from typing import List, Dict
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class KapitalBankScraper:
     """Scraper for Kapital Bank branch locations."""
 
     PAGE_URL = "https://www.kapitalbank.az/locations/branch/all"
-    OUTPUT_FILE = "data/kb_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "kb_branches.csv")
 
     def __init__(self):
         self.branches = []

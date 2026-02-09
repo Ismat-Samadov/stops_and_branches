@@ -4,10 +4,14 @@ Rabita Bank Azerbaijan Branch Scraper
 Fetches branch data from Rabita Bank's API and saves to CSV.
 """
 
+import os
 import requests
 import csv
 import json
 from typing import List, Dict
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
 
 
 class RabitaBankScraper:
@@ -15,7 +19,7 @@ class RabitaBankScraper:
 
     API_URL = "https://www.rabitabank.com/filial-ve-bankomatlar/filiallar?q="
     BASE_URL = "https://www.rabitabank.com"
-    OUTPUT_FILE = "data/rabita_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "rabita_branches.csv")
 
     def __init__(self):
         self.branches = []

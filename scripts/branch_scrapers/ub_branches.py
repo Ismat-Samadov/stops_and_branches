@@ -4,6 +4,7 @@ Unibank Azerbaijan Branch Scraper
 Fetches branch data from Unibank's website and saves to CSV.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -11,12 +12,15 @@ import re
 import json
 from typing import List, Dict
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class UnibankScraper:
     """Scraper for Unibank branch locations."""
 
     PAGE_URL = "https://unibank.az/locations/index"
-    OUTPUT_FILE = "data/ub_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "ub_branches.csv")
 
     def __init__(self):
         self.branches = []

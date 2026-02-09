@@ -4,6 +4,7 @@ Pasha Bank Azerbaijan Branch Scraper
 Fetches branch data from Pasha Bank's website and saves to CSV.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -11,12 +12,15 @@ import time
 import re
 from typing import List, Dict, Tuple, Optional
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class PashaBankScraper:
     """Scraper for Pasha Bank branch locations."""
 
     PAGE_URL = "https://www.pashabank.az/branches/lang,az/"
-    OUTPUT_FILE = "data/pashabank_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "pashabank_branches.csv")
 
     def __init__(self):
         self.branches = []

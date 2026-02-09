@@ -4,18 +4,22 @@ Yelo Bank Azerbaijan Branch Scraper
 Fetches branch data from Yelo Bank's website and saves to CSV.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
 import re
 from typing import List, Dict
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class YeloBankScraper:
     """Scraper for Yelo Bank branch locations."""
 
     PAGE_URL = "https://www.yelo.az/az/individuals/atms-and-branches/"
-    OUTPUT_FILE = "data/yelo_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "yelo_branches.csv")
 
     def __init__(self):
         self.branches = []

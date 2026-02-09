@@ -4,6 +4,7 @@ Ziraat Bank Azerbaijan Branch Scraper
 Fetches branch data from Ziraat Bank's website and saves to CSV.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -11,12 +12,15 @@ import time
 import re
 from typing import List, Dict, Tuple, Optional
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class ZiraatBankScraper:
     """Scraper for Ziraat Bank branch locations."""
 
     PAGE_URL = "https://ziraatbank.az/az/branches-atms"
-    OUTPUT_FILE = "data/ziraatbank_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "ziraatbank_branches.csv")
 
     def __init__(self):
         self.branches = []

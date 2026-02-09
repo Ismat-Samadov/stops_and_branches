@@ -10,6 +10,9 @@ import csv
 import re
 import os
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 def scrape_branches():
     url = "https://www.accessbank.az/az/our-bank/service-networks/"
 
@@ -151,7 +154,7 @@ def main():
         branches = scrape_branches()
 
         # Create data directory if it doesn't exist
-        os.makedirs('data', exist_ok=True)
+        os.makedirs(os.path.join(ROOT_DIR, 'data', 'branches'), exist_ok=True)
 
         # Collect all unique field names from all branches
         fieldnames = set()
@@ -162,7 +165,7 @@ def main():
         fieldnames = sorted(fieldnames)
 
         # Save to CSV file
-        output_file = 'data/ab_branches.csv'
+        output_file = os.path.join(ROOT_DIR, 'data', 'branches', 'ab_branches.csv')
         with open(output_file, 'w', encoding='utf-8', newline='') as f:
             if branches:
                 writer = csv.DictWriter(f, fieldnames=fieldnames)

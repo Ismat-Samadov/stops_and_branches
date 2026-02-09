@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 """
 Combine all bank branch CSV files into a single file.
-Output: data/combined_atms.csv with columns: bank_name, lat, long
+Output: data/branches/combined_branches.csv with columns: bank_name, lat, long
 """
 
 import csv
 import os
 from pathlib import Path
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class BranchCombiner:
     """Combines all bank branch CSV files into one unified file."""
 
-    DATA_DIR = "data"
-    OUTPUT_FILE = "data/combined_branches.csv"
+    DATA_DIR = os.path.join(ROOT_DIR, "data", "branches")
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "combined_branches.csv")
 
     # Mapping of CSV files to bank names
     BANK_FILES = {

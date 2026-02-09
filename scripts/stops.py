@@ -2,6 +2,9 @@ import requests
 import json
 import os
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(SCRIPT_DIR)
+
 def fetch_stops():
     """
     Fetch all bus stops from the Ayna API and save to JSON file.
@@ -17,10 +20,10 @@ def fetch_stops():
         print(f"Successfully fetched {len(stops_data) if isinstance(stops_data, list) else 'unknown number of'} stops")
 
         # Ensure data directory exists
-        os.makedirs('data', exist_ok=True)
+        os.makedirs(os.path.join(ROOT_DIR, 'data'), exist_ok=True)
 
         # Save to JSON file
-        output_path = 'data/stops.json'
+        output_path = os.path.join(ROOT_DIR, 'data', 'stops.json')
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(stops_data, f, ensure_ascii=False, indent=2)
 

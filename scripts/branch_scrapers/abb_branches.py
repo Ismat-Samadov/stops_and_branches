@@ -15,6 +15,9 @@ import csv
 import os
 import re
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 def extract_branches_from_rsc(response_text):
     """Extract branch data from React Server Component response"""
     branches = []
@@ -183,7 +186,7 @@ def main():
         print(f"\nTotal unique branches: {len(branches_list)}")
 
         # Create data directory if it doesn't exist
-        os.makedirs('data', exist_ok=True)
+        os.makedirs(os.path.join(ROOT_DIR, 'data', 'branches'), exist_ok=True)
 
         # Collect all unique field names
         fieldnames = set()
@@ -194,7 +197,7 @@ def main():
         fieldnames = sorted(fieldnames)
 
         # Save to CSV file
-        output_file = 'data/abb_branches.csv'
+        output_file = os.path.join(ROOT_DIR, 'data', 'branches', 'abb_branches.csv')
         with open(output_file, 'w', encoding='utf-8', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()

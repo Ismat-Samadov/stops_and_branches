@@ -4,6 +4,7 @@ AtaBank (ATB) Azerbaijan Branch Scraper
 Fetches branch data from ATB's website and saves to CSV.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -11,12 +12,15 @@ import re
 import json
 from typing import List, Dict, Tuple
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class ATBScraper:
     """Scraper for AtaBank branch locations."""
 
     PAGE_URL = "https://atb.az/filial/"
-    OUTPUT_FILE = "data/atb_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "atb_branches.csv")
 
     def __init__(self):
         self.branches = []

@@ -4,6 +4,7 @@ Bank Respublika Branch Scraper
 Fetches branch data from Bank Respublika's website and saves to CSV.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -12,12 +13,15 @@ import html
 import re
 from typing import List, Dict
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class BankRespublikaScraper:
     """Scraper for Bank Respublika branch locations."""
 
     PAGE_URL = "https://www.bankrespublika.az/az/branches"
-    OUTPUT_FILE = "data/br_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "br_branches.csv")
 
     def __init__(self):
         self.branches = []

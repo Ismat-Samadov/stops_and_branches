@@ -3,6 +3,9 @@ import json
 import os
 import time
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(SCRIPT_DIR)
+
 def fetch_bus_list():
     """
     Fetch the list of all bus IDs from the Ayna API.
@@ -79,10 +82,10 @@ def fetch_all_bus_details():
     print(f"\nSuccessfully fetched details for {len(all_bus_details)}/{total_buses} buses")
 
     # Ensure data directory exists
-    os.makedirs('data', exist_ok=True)
+    os.makedirs(os.path.join(ROOT_DIR, 'data'), exist_ok=True)
 
     # Save to JSON file
-    output_path = 'data/busDetails.json'
+    output_path = os.path.join(ROOT_DIR, 'data', 'busDetails.json')
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(all_bus_details, f, ensure_ascii=False, indent=2)
 

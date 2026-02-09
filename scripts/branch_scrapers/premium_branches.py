@@ -4,18 +4,22 @@ Premium Bank Azerbaijan Branch Scraper
 Fetches branch data from Premium Bank's website and saves to CSV.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
 import re
 from typing import List, Dict
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class PremiumBankScraper:
     """Scraper for Premium Bank branch locations."""
 
     PAGE_URL = "https://www.premiumbank.az/az/service-network/"
-    OUTPUT_FILE = "data/premium_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "premium_branches.csv")
 
     def __init__(self):
         self.branches = []

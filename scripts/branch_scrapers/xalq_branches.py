@@ -4,10 +4,14 @@ Xalq Bank Azerbaijan Branch Scraper
 Fetches branch data from Xalq Bank's API and saves to CSV.
 """
 
+import os
 import requests
 import csv
 import json
 from typing import List, Dict
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
 
 
 class XalqBankScraper:
@@ -15,7 +19,7 @@ class XalqBankScraper:
 
     API_URL = "https://xalqbank.az/api/az/xidmet-sebekesi?include=menu"
     BASE_URL = "https://xalqbank.az"
-    OUTPUT_FILE = "data/xalq_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "xalq_branches.csv")
 
     def __init__(self):
         self.branches = []

@@ -4,6 +4,7 @@ Bank of Baku Branch Scraper
 Fetches branch data from Bank of Baku's API and saves branches (filiali) to CSV.
 """
 
+import os
 import aiohttp
 import asyncio
 import csv
@@ -11,12 +12,15 @@ import re
 from typing import List, Dict
 from urllib.parse import quote
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class BankOfBakuScraper:
     """Scraper for Bank of Baku branch locations."""
 
     API_URL = "https://site-api.bankofbaku.com/categories/serviceNetwork/individual"
-    OUTPUT_FILE = "data/bob_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "bob_branches.csv")
 
     def __init__(self):
         self.branches = []

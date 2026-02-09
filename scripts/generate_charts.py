@@ -20,8 +20,11 @@ import numpy as np
 # ──────────────────────────────────────────────
 # Configuration
 # ──────────────────────────────────────────────
-CHARTS_DIR = "charts"
-DATA_DIR = "data"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(SCRIPT_DIR)
+
+CHARTS_DIR = os.path.join(ROOT_DIR, "charts")
+DATA_DIR = os.path.join(ROOT_DIR, "data")
 BRANCHES_FILE = os.path.join(DATA_DIR, "branches", "combined_branches.csv")
 STOPS_FILE = os.path.join(DATA_DIR, "stops.json")
 BUS_DETAILS_FILE = os.path.join(DATA_DIR, "busDetails.json")

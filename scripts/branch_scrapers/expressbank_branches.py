@@ -4,18 +4,22 @@ Express Bank Azerbaijan Branch Scraper
 Fetches branch data from Express Bank's website and saves to CSV.
 """
 
+import os
 import requests
 import csv
 import re
 import json
 from typing import List, Dict
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class ExpressBankScraper:
     """Scraper for Express Bank branch locations."""
 
     PAGE_URL = "https://www.expressbank.az/az/page/xidmet-sebekesi"
-    OUTPUT_FILE = "data/expressbank_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "expressbank_branches.csv")
 
     def __init__(self):
         self.branches = []

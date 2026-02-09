@@ -4,6 +4,7 @@ Azərbaycan Fəhlə Bankı (AFB) Branch Scraper
 Fetches branch data from AFB's website and saves to CSV.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -11,12 +12,15 @@ import time
 import re
 from typing import List, Dict, Tuple, Optional
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+
 
 class AFBScraper:
     """Scraper for AFB branch locations."""
 
     PAGE_URL = "https://afb.az/filiallar"
-    OUTPUT_FILE = "data/afb_branches.csv"
+    OUTPUT_FILE = os.path.join(ROOT_DIR, "data", "branches", "afb_branches.csv")
 
     def __init__(self):
         self.branches = []
