@@ -1,0 +1,269 @@
+#!/usr/bin/env python3
+"""
+BTB (Baku Business Bank) Azerbaijan Branch Scraper
+Fetches branch data from BTB's website and saves to CSV.
+"""
+
+import requests
+from bs4 import BeautifulSoup
+import csv
+import time
+import re
+from typing import List, Dict, Tuple, Optional
+
+
+class BTBScraper:
+    """Scraper for BTB branch locations."""
+
+    PAGE_URL = "https://www.btb.az/az/officees"
+    OUTPUT_FILE = "data/btb_branches.csv"
+
+    def __init__(self):
+        self.branches = []
+
+    def fetch_page(self) -> str:
+        """Fetch the HTML page containing branch data."""
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        }
+        response = requests.get(self.PAGE_URL, headers=headers)
+        response.raise_for_status()
+        response.encoding = 'utf-8'
+        return response.text
+
+    def clean_text(self, text: str) -> str:
+        """Clean extra whitespace from text."""
+        if not text:
+            return ""
+        text = ' '.join(text.split())
+        return text.strip()
+
+    def preprocess_address(self, address: str) -> str:
+        """Preprocess address for better geocoding results."""
+        # Replace Azerbaijani abbreviations with full words
+        replacements = {
+            ' küç,': ' küçəsi,',
+            ' küç.': ' küçəsi',
+            ' pr.': ' prospekti',
+            'şəhəri': 'şəhər',
+            'Bakı şəhər': 'Baku',
+            'Sumqayıt şəhər': 'Sumqayit',
+            'Gəncə şəhər': 'Ganja',
+        }
+
+        processed = address
+        for old, new in replacements.items():
+            processed = processed.replace(old, new)
+
+        # Remove "Azərbaycan" at the end
+        processed = re.sub(r',?\s*Azərbaycan\s*$', '', processed)
+
+        # Add Azerbaijan for better geocoding
+        processed = f"{processed}, Azerbaijan"
+
+        return processed
+
+    def try_geocode(self, query: str) -> Optional[Tuple[str, str]]:
+        """Try to geocode a single query string."""
+        try:
+            url = 'https://nominatim.openstreetmap.org/search'
+
+            params = {
+                'q': query,
+                'format': 'json',
+                'limit': 1,
+                'countrycodes': 'az',
+            }
+
+            headers = {
+                'User-Agent': 'BankBranchScraper/1.0 (https://github.com/yourusername/branch_locations)'
+            }
+
+            response = requests.get(url, params=params, headers=headers, timeout=10)
+            response.raise_for_status()
+
+            data = response.json()
+
+            if data and len(data) > 0:
+                lat = data[0].get('lat', '')
+                lon = data[0].get('lon', '')
+                if lat and lon:
+                    return (str(lat), str(lon))
+
+            return None
+
+        except Exception:
+            return None
+
+    def geocode_address(self, address: str) -> Tuple[str, str]:
+        """
+        Geocode an address using Nominatim (OpenStreetMap).
+        Tries multiple strategies to find coordinates.
+        Returns (latitude, longitude) as strings, or ('', '') if geocoding fails.
+        """
+        if not address:
+            return ('', '')
+
+        # Strategy 1: Try full preprocessed address
+        processed_address = self.preprocess_address(address)
+        result = self.try_geocode(processed_address)
+        if result:
+            print(f"  ✓ Geocoded (full): {address[:40]}...")
+            print(f"    -> {result}")
+            return result
+
+        time.sleep(0.5)
+
+        # Strategy 2: Try without building number
+        address_no_number = re.sub(r'\s*\d+[A-Za-z]?\s*$', '', address)
+        # Also try removing number after comma
+        address_no_number = re.sub(r',\s*\d+[A-Za-z]?\s*', ', ', address_no_number)
+
+        if address_no_number != address:
+            processed = self.preprocess_address(address_no_number)
+            result = self.try_geocode(processed)
+            if result:
+                print(f"  ✓ Geocoded (street): {address[:40]}...")
+                print(f"    -> {result}")
+                return result
+
+        time.sleep(0.5)
+
+        # Strategy 3: Try just city and main street name
+        city = ''
+        if 'Bakı' in address or 'Baku' in address:
+            city = 'Baku'
+        elif 'Sumqayıt' in address:
+            city = 'Sumqayit'
+        elif 'Gəncə' in address or 'Ganja' in address:
+            city = 'Ganja'
+
+        if city:
+            # Try to extract street name
+            street_match = re.search(r'([А-Яа-яƏəŞşÇçÜüÖöĞğİı\w\s]+(?:küç|küçəsi|pr\.|prospekti))', address)
+            if street_match:
+                street = street_match.group(1).strip()
+                street_clean = street.replace('pr.', 'prospekti').replace('küç,', 'küçəsi').replace('küç.', 'küçəsi')
+                query = f"{street_clean}, {city}, Azerbaijan"
+                result = self.try_geocode(query)
+                if result:
+                    print(f"  ✓ Geocoded (city+street): {address[:40]}...")
+                    print(f"    -> {result}")
+                    return result
+
+                time.sleep(0.5)
+
+            # Strategy 4: Try just the city center as last resort
+            result = self.try_geocode(f"{city}, Azerbaijan")
+            if result:
+                print(f"  ✓ Geocoded (city center): {address[:40]}...")
+                print(f"    -> {result}")
+                return result
+
+        print(f"  ✗ No coordinates found for: {address[:50]}...")
+        return ('', '')
+
+    def extract_branches(self, html_content: str) -> List[Dict]:
+        """Extract branch data from HTML."""
+        soup = BeautifulSoup(html_content, 'html.parser')
+        branches = []
+
+        # Find all branch items with data-sort="branch"
+        branch_links = soup.find_all('a', class_='bl_l_item', attrs={'data-sort': 'branch'})
+        print(f"Found {len(branch_links)} branches in HTML")
+
+        for link in branch_links:
+            # Extract branch name from link text (before the div)
+            # Get all text nodes that are direct children
+            name = ''
+            for content in link.contents:
+                if isinstance(content, str):
+                    name += content.strip()
+            name = self.clean_text(name)
+
+            # Extract address and phone from map-desc
+            map_desc = link.find('div', class_='map-desc')
+            if not map_desc:
+                continue
+
+            p_tags = map_desc.find_all('p')
+            address = ''
+            phone = ''
+
+            if len(p_tags) >= 1:
+                address = self.clean_text(p_tags[0].get_text())
+            if len(p_tags) >= 2:
+                phone = self.clean_text(p_tags[1].get_text())
+
+            if not name or not address:
+                continue
+
+            # Geocode the address to get coordinates
+            print(f"\nGeocoding branch: {name}")
+            latitude, longitude = self.geocode_address(address)
+
+            # Rate limiting: wait 1 second between requests
+            time.sleep(1)
+
+            branch = {
+                'name': name,
+                'address': address,
+                'phone': phone,
+                'latitude': latitude,
+                'longitude': longitude
+            }
+
+            branches.append(branch)
+
+        return branches
+
+    def save_to_csv(self, branches: List[Dict]):
+        """Save branch data to CSV file."""
+        if not branches:
+            print("No branches found to save.")
+            return
+
+        fieldnames = [
+            'name', 'address', 'phone', 'latitude', 'longitude'
+        ]
+
+        with open(self.OUTPUT_FILE, 'w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(branches)
+
+        print(f"Saved {len(branches)} branches to {self.OUTPUT_FILE}")
+
+    def run(self):
+        """Main execution method."""
+        print("Fetching BTB branches page...")
+        html = self.fetch_page()
+
+        print("Extracting branch data from page...")
+        self.branches = self.extract_branches(html)
+
+        print(f"\nExtracted {len(self.branches)} branches")
+
+        # Count how many have coordinates
+        with_coords = sum(1 for b in self.branches if b['latitude'] and b['longitude'])
+        print(f"Branches with coordinates: {with_coords}/{len(self.branches)}")
+
+        print("\nSaving to CSV...")
+        self.save_to_csv(self.branches)
+
+        # Print first branch as example
+        if self.branches:
+            print("\nExample (first branch):")
+            import json
+            print(json.dumps(self.branches[0], ensure_ascii=False, indent=2))
+
+        print("Done!")
+
+
+def main():
+    scraper = BTBScraper()
+    scraper.run()
+
+
+if __name__ == "__main__":
+    main()

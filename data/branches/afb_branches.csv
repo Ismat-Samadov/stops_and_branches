@@ -1,0 +1,8 @@
+city_class,name,address,phone,email,working_hours,latitude,longitude
+city_8,Baş ofis,"Bakı ş., Yasamal r-nu, Nəriman Nərimanov pros. 206/466",+994 12 565 65 56 (1545),info@afb.az,09:00-17:00 (Nahar fasiləsi 13:00-14:00),40.3745514,49.8238376
+city_8,Mərkəz filialı,"Bakı ş., Yasamal r-nu, İsmayıl bəy Qutqaşınlı küç.112",+994 12 565 65 56 (1545),info@afb.az,09:00-17:00 (Nahar fasiləsi 13:00-14:00),40.3755885,49.8328009
+city_8,Sahil filialı,"Bakı ş., Nizami küç. 111",+994 12 565 65 56 (1545),info@afb.az,09:00-17:00 (Nahar fasiləsi 13:00-14:00),40.3722855,49.8379362
+city_8,Nərimanov filialı,"Bakı ş., Nərimanov r-nu, Həsənoğlu küç. 13F",+994 12 565 65 56 (1545),info@afb.az,09:00-17:00 (Nahar fasiləsi 13:00-14:00),40.3755885,49.8328009
+city_128,Sumqayıt filialı,"Sumqayit ş., 5-ci mikrorayon, N.Nərimanov küç. 53 a",+994 12 565 65 56 (1545),info@afb.az,09:00-17:00 (Nahar fasiləsi 13:00-14:00),40.7039350,49.6576930
+city_127,Gəncə filialı,"Gəncə ş., Atatürk pros. 242",+994 12 565 65 56 (1545),info@afb.az,09:00-17:00 (Nahar fasiləsi 13:00-14:00),40.6798083,46.3597178
+city_9,Qəbələ filialı,"Qəbələ ş., Heydər Əliyev pros. 137",+994 12 565 65 56 (1545),info@afb.az,09:00-17:00 (Nahar fasiləsi 13:00-14:00),40.9436064,47.8213377

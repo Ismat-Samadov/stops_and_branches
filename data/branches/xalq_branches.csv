@@ -1,0 +1,32 @@
+id,name,slug,category,address,latitude,longitude,phone,director,working_hours
+184,"""Baş"" filial",bas-filial,Filiallar,"AZ1065 İnşaatçılar pr.,22M, Yasamal ray., Bakı, Azərbaycan",40.37684093623348,49.8203690978759,+994 12 4044346,Əliyeva Elvira Raşitovna,Həftəiçi: 09:30 - 17:00
+186,"""Mərdəkan"" filialı",merdekan-filiali,Filiallar,"AZ 1044,Yesenin küç.334, Mərdəkan qəs., Xəzər ray., Bakı, Azərbaycan",40.4217355,49.9968877,+994 12 4540675,Qurbanov Ramil Rafiq oğlu,Həftəiçi: 09:30 - 17:00
+485,"""Sahil"" filialı",sahil-filiali,Filiallar,"AZ 1000,Xəqani küç.,23, Səbail ray., Bakı, Azərbaycan",40.373421,49.845421,+994 12 4933584,Axundova Kəmalə Çingiz qızı,Həftəiçi: 09:30-17:00
+486,"""Mərkəz"" filialı",merkez-filiali,Filiallar,"AZ1010 28 May küç.,17, Nəsimi ray., Bakı, Azərbaycan",40.376850,49.848148,+994 12 4933881,Məmmədli  Elnur  Oqtay oğlu,Həftəiçi: 09:30-17:00
+487,"""Neftçilər"" filialı",neftciler-filiali,Filiallar,"AZ1118  Q.Qarayev pr.,70 B, Nizami ray., Bakı, Azərbaycan",40.410671,49.942631,+994 12 5201468,Vidadi Sofuyev İsabalı oğlu,Həftəiçi: 09:30-17:00
+488,"""Əhmədli"" filialı",ehmedli-filiali,Filiallar,"AZ1149 M.Rüstəmov küç.,23., Xətai ray., Bakı, Azərbaycan",40.387157,49.961990,+994 12 5709205,Ələkbərov Anar Fərmail oğlu,Həftəiçi: 09:30-17:00
+489,"""20 Yanvar"" filialı",20-yanvar-filiali,Filiallar,"AZ1012, Moskva pr.,67, Yasamal ray., Bakı, Azərbaycan",40.404926,49.804379,+994 12 4314309,Hüseynov Ayaz Vəli oğlu,Həftəiçi: 09:30-17:00
+490,"""Yubiley"" filialı",yubiley-filiali,Filiallar,"AZ 1022 Akademik Həsən Əliyev küç.,24, Nərimanov ray., Bakı, Azərbaycan",40.398659,49.833404,+994124044340,Haqverdiyev Elçin Yaşar oğlu,Həftəiçi: 09:30-17:00
+491,"""Ağ Şəhər"" filialı",ag-seher-filiali,Filiallar,"AZ1025 Nobel pr.,25E, Xətai ray.,Bakı, Azərbaycan",40.379780,49.883236,+994 12 4048115,m.i.e - Xəlilzadə Azər İmran oğlu,Həftəiçi: 09:30-17:00
+492,"""Gəncə"" filialı",gence-filiali,Filiallar,"AZ 2000,  Gəncə şəhəri, Heydər Əliyev  prospekti, giriş 438",40.675846,46.358421,+994 22 2662483,Əlizadə Sənan Mehman oğlu,Həftəiçi: 09:30-17:00
+493,"""Zaqatala"" filialı",zaqatala-filiali,Filiallar,"AZ6200 Nizami küç.,1, Zaqatala, Azərbaycan",41.632965,46.651352,+994242256679,Cəlilov Vasif Nurəddin oğlu,Həftəiçi: 09:30-17:00
+494,"""Neftçala"" filialı",neftcala-filiali,Filiallar,"AZ 4700,20 Yanvar küç.18 A, Neftçala, Azərbaycan",39.377796,49.245377,+994 21 263 30 58,Tağıyev Fərid Valeh oğlu,Həftəiçi: 09:30-17:00
+495,"""Mingəçevir"" filialı",mingecevir-filiali,Filiallar,"AZ 4500 M.F.Axundov küç.,15/16A, Mingəçevir, Azərbaycan",40.771534,47.046772,+994 24 2742783,Mustafayev Eldəniz Mansır oğlu,Həftəiçi: 09:30-17:00
+496,"""Cəlilabad"" filialı",celilabad-filiali,Filiallar,"AZ1500 H.Əliyev pr.,142 A, Cəlilabad, Azərbaycan",39.210655,48.504318,+99 42 52455605,Qasımlı Rza Ağəli oğlu,Həftəiçi: 09:30-17:00
+497,"""Yevlax"" filialı",yevlax-filiali,Filiallar,"AZ6600 H.Əliyev pr.,47A, Yevlax, Azərbaycan",40.610424,47.147102,+99 42 23331690,Qədirov Əhəd Nəcivəddin oğlu,Həftəiçi: 09:30-17:00
+498,"""Xaçmaz"" filialı",xacmaz-filiali,Filiallar,"AZ 2700 H.Əliyev küç., 34B, Xaçmaz, Azərbaycan",41.463463,48.806805,+994 23 3255629,Əliquliyev Mübariz Cəmasib oğlu,Həftəiçi: 09:30 -17:00
+499,"""Şabran"" filialı",sabran-filiali,Filiallar,"AZ1700 H.Əliyev pr.,115 A, Şabran Azərbaycan",41.209164,48.994358,+994 23 3582417,Baxşiyev Azər Oruc oğlu,Həftəiçi: 09:30-17:00
+500,"""Qazax"" filialı",qazax-filiali,Filiallar,"AZ3500 S.Arıxov küç., Qazax, Azərbaycan",41.088779,45.354904,+994 22 2965600,Kazımov Elçin Sabir oğlu,Həftəiçi: 09:30-17:00
+501,"""İsmayıllı"" filialı",ismayilli-filiali,Filiallar,"AZ3100 H.Əliyev pr.,97, İsmayıllı, Azərbaycan",40.791603,48.155460,+994 20 282 14 93,Mustafayev Sənani Musa oğlu,Həftəiçi: 09:30-17:00
+502,"""Quba"" filialı",quba-filiali,Filiallar,"AZ 4000, 223-cü Atıcı diviziya küç., 21, Quba, Azərbaycan",41.362530,48.524834,+994 23 3364162,Rəhimov Səlim İbrahim oğlu,Həftəiçi: 09:30-17:00
+503,"""Qusar"" filialı",qusar-filiali,Filiallar,"AZ 3800, F.Musayev küç.,68, Qusar, Azərbaycan",41.423927,48.426739,+994 23 3852472,Əsgərov Murad Dünyaməddin oğlu,Həftəiçi: 09:30-17:00
+504,"""Şamaxı"" filialı",samaxi-filiali,Filiallar,"AZ5600 Şəhriyar küç.,1, Şamaxı, Azərbaycan",40.637798,48.636768,+994202650526,Babayev Orxan Namiq oğlu,Həftəiçi: 09:30-17:00
+505,"""Şəki"" filialı",seki-filiali,Filiallar,"AZ 5500 M.Ə.Rəsulzadə pr.,169A, Şəki, Azərbaycan",41.202698,47.177700,+994 24 2440382,Mütəllibov Ramin Vahab oğlu,"Həftəiçi: 09:30-13:00, 14:00-17:00"
+506,"""Lənkəran"" filialı",lenkeran-filiali,Filiallar,"AZ4200 Ş.Axundov küç.,20, Lənkəran, Azərbaycan",38.754158,48.855434,+994 25 2583079,Tağıyev Elnur Vaqif oğlu,Həftəiçi: 09:30-17:00
+507,"""Şəmkir"" filialı",semkir-filiali,Filiallar,"AZ5700 H.Aslanov küç.,44, Şəmkir, Azərbaycan",40.833984,46.023399,+994 22 3030203; +994 22 3030204,Qaffarov Əsgər Kərim oğlu,Həftəiçi: 09:30-17:00
+508,"""Şirvan"" filialı",sirvan-filiali,Filiallar,"AZ1801 H.Əliyev pr.,8, Şirvan, Azərbaycan",39.954517,48.936035,+994 21 2151615,Cəfərov Emin Vələddin oğlu,"Həftəiçi: 09:30-13:00, 14:00-17:00"
+525,"""Sumqayıt"" filialı",sumqayit-filiali,Filiallar,"AZ5000 S.Vurğun küç.,16/132, 5-ci mkr , Sumqayıt, Azərbaycan",40.585751,49.684441,+994 18 6424120,Həsənov Anar Teymur oğlu,Həftəiçi: 09:30-17:00
+509,"""Siyəzən"" filialı",siyezen-filiali,Filiallar,"AZ5300  H.Əliyev küç.88 B, Siyəzən, Azərbaycan",41.070374,49.116631,+994 23 3043215,Hümmətov Müslüm Mövsüm oğlu,Həftəiçi: 09:30-17:00
+510,"""Tovuz"" filialı",tovuz-filiali,Filiallar,"AZ6000 H.Aslanov küç.,21, Tovuz, Azərbaycan",40.988838,45.618156,+994223123316,Kazımov Elçin Sabir oğlu,Həftəiçi: 09:30-17:00
+511,"""Göyçay"" filialı",goycay-filiali,Filiallar,"AZ2300 H.Əliyev pr.,60, Göyçay, Azərbaycan",40.649593,47.746639,+994 20 2746206,Sadıqov Təbriz Mehman oğlu,Həftəiçi: 09:30-17:00
+1959,1 saylı Mübadilə şöbəsi,1-sayli-mubadile-sobesi-az,Mübadilə şöbəsi,"Bakı şəh.,Səbail, ray.,Azadlıq pr.1B (Hilton Baku Hotel)",40.37210511482167,49.84967310634824,138,,Həftəiçi: Hər gün (10:00 - 20:00)

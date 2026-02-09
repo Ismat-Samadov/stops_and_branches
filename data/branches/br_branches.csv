@@ -1,0 +1,42 @@
+id,name,address,latitude,longitude,phone,email,working_hours,creation_date,branch_code,city_location
+4474,"""Göyçay"" filialı",,40.6420662,47.7451923,,goychay@bankrespublika.az,,Noyabr 2025,065,regions
+4392,“Beyləqan” filialı,"Beyləqan şəhəri, Sərdar İmrəliyev küçəsi, giriş 292A",39.7701636,47.6137369,144,Beylagan@BankRespublika.az,,8 İyul 2025,064,regions
+4294,"""Qəbələ filialı""",,40.9750481,47.8414498,,Gabala@bankrespublika.az,,,063,regions
+4223,"""Goranboy"" filialı",,,,,,,,513928,regions
+4188,"""Füzuli"" filialı",,39.599480,47.150647,,,,,061,regions
+3575,“Şabran” filialı,"Şabran şəhəri, Heydər Əliyev prospekti, 297",41.2115133,48.9578668,144,shabran@bankrespublika.az,Bazar ertəsi – Cümə: 9:00 - 17:30,Sentyabr 2023,,regions
+3333,“Sədərək” filialı,"Bakı şəhəri, Qaradağ rayonu, Sədərək Ticarət Mərkəzi daxilində",40.330608,49.7836361,144,Sadarak@bankrespublika.az,Bazar ertəsi – Cümə: 9:00 - 17:30,Fevral 2023,050,baku
+3059,"""Qazax"" filialı",,41.0905398,45.3607516,,,,,49,regions
+2963,“KOB Mərkəzi” filialı,"AZ 1075, Bakı şəhəri, Nərimanov rayonu, Ziya Bünyadov prospekti 38C, 1969-cu məhəllə (Kiçik və Orta Biznesin İnkişafı Agentliyinin “Bakı KOB evi” inzibati binası daxilində)",40.4130419,49.8535906,144,kobmerkezi@bankrespublika.az,Bazar ertəsi – Cümə: 9:00 - 17:30,Yanvar 2023,048,baku
+2290,“Ağcabədi” filialı,"AZ 0400, Ağcabədi şəhəri, Həzi Aslanov küçəsi",40.0446243,47.4536638,144,aghjabadi@bankrespublika.az,Bazar ertəsi – Cümə: 9:00 - 17:30,İyun 2022,046,regions
+2227,"""Naxçıvan"" Filialı","Heydər Əliyev pr-ti 37-3, Naxçıvan şəhəri, Naxçıvan MR",39.219181,45.407553,(+994 36) 550 20 26/27/28,Nakhchivan@bankrespublika.az,Bazar ertəsi – Cümə: 9:00 - 17:30,İyun 2022,045,regions
+1638,"""Xırdalan"" Filialı","Bakı ş., Mehdi Hüseynzadə küçəsi, ev 1",40.4551122,49.7381697,144,Khirdalan@bankrespublika.az,Bazar ertəsi – Cümə: 9:00 - 17:30,Mart 2022,044,regions
+1477,"""Şəki filialı""",,41.2023238,47.1765699,,Sheki@BankRespublika.az,,,043,regions
+972,“Sumqayıt” filialı,,40.59369340025972,49.67176735401153,,Sumgayit@BankRespublika.az,,Avqust 2006,16,regions
+464,"""Tovuz"" filialı",,40.99959341455489,45.63514709472656,,Tovuz@BankRespublika.az,,Noyabr 2012,39,regions
+463,"""Gəncə"" filialı",,40.672162,46.367889,,Ganja@BankRespublika.az,,May 2002,5,regions
+462,"""Mingəçevir"" filialı",,40.76556625520051,47.058555483818054,,Mingechevir@BankRespublika.az,,Dekabr 2008,31,regions
+461,"""Yevlax"" filialı",,40.61707081691601,47.14813590049744,,Yevlax@BankRespublika.az,,Sentyabr 1993,3,regions
+460,“Bərdə” filialı,,40.3776982386996,47.12587355895721,,Barda@BankRespublika.az,,Avqust 2008,28,regions
+459,"""Zaqatala"" filialı",,41.63366365063957,46.640567779541016,,Zagatala@BankRespublika.az,,Avqust 2009,36,regions
+458,“Şirvan” filialı,,39.9567968,48.9381305,,Shirvan@BankRespublika.az,,İyun 2007,21,regions
+457,"""Sabirabad"" filialı",,40.005840046240984,48.471059054136276,,Sabirabad@BankRespublika.az,,İyul 2011,38,regions
+456,"""Quba"" filialı",,41.361699691715046,48.51355969905853,,Quba@BankRespublika.az,,Sentyabr 2005,8,regions
+455,“Qax” filialı,,41.41951149810361,46.919474601745605,,Gakh@BankRespublika.az,,Dekabr 2010,37,regions
+454,"""Masallı"" fililalı",,39.024133994046764,48.66821885108948,,Masalli@BankRespublika.az,,Mart 2009,25,regions
+453,"""Lənkəran"" filialı",,38.75441794597313,48.856791257858276,,Lenkeran@BankRespublika.az,,Noyabr 2006,12,regions
+452,"""Abşeron"" filialı","Xırdalan ş., Bakı-Sumqayıt şossesi, 6-cı km.",40.45978893593613,49.75383996963501,(+994 12) 349 00 00,Absheron@BankRespublika.az,Bazar ertəsi – Cümə: 9:00 - 17:30,İyun 2008,27,regions
+451,"""Xaçmaz"" filialı",,41.46130798228363,48.797769248485565,,Khachmaz@BankRespublika.az,,Aprel 2009,13,regions
+448,Baş Ofis,,40.373452166144304,49.84465985818588,,info@bankrespublika.az,,,2,baku
+447,"""Yasamal"" Filialı",,40.38445298840345,49.80322911663734,,Yasamalsp@BankRespublika.az,,Sentyabr 2013,40,baku
+446,"""Neftçilər"" filialı",,40.4133593,49.9396153,,Neftchiler@BankRespublika.az,,Sentyabr 2008,32,baku
+445,"""Nəsimi"" filialı",,40.37740777644492,49.84975611726445,,Nasimi@BankRespublika.az,,Avqust 2002,6,baku
+444,"""Nizami"" filialı",,40.3856335,49.8281133,,Nizami@BankRespublika.az,,İyul 2019,1,baku
+443,“Memar Əcəmi” filialı,,40.4055418,49.8148558,,Memaradjemisp@BankRespublika.az,,Noyabr 2013,19,baku  
+442,"""Bakıxanov"" filialı",,40.41189494947813,49.96860980987549,,Bakikhanov@BankRespublika.az,,Oktyabr 2007,23,baku
+441,"""Əhmədli"" filialı",,40.38547946822021,49.95419293642044,,Ahmedli@BankRespublika.az,,Aprel 2003,9,baku
+440,"""Nərimanov"" filialı",,40.40106916469152,49.87422823905945,,Aganeymatullasp@BankRespublika.az,,Noyabr 2007,24,baku
+405,"""Azneft"" filialı / Ofis24","Bakı ş., Neftçilər pr. 67",40.3608186252178,49.83401149511337,144,Azneft@BankRespublika.az,Bazar ertəsi – Cümə: 9:00 - 17:30,Fevral 2004,10,baku
+406,"""Azadlıq"" filialı","Bakı ş., Azadlıq pr, 120",40.38953409909272,49.84288209999999,144 e-mail: Azadlig@BankRespublika.az İş vaxtı: Bazar ertəsi – Cümə: 9:00 - 17:30 Yaradılma tarixi: Noyabr 2006,,Bazar ertəsi – Cümə: 9:00 - 17:30,Noyabr 2006,11  ,baku
+450,"""Cəlilabad"" filialı","Cəlilabad ş., H.Əliyev pr. 161 B",39.21625701598024,48.51415812969208,(+994 25) 245 01 01 Faks: (+994 25) 245 01 03,Jalilabad@BankRespublika.az,Bazar ertəsi – Cümə: 9:00 - 17:30,Mart 2009,33,regions
+3333,“Sədərək” filialı,"Bakı şəhəri, Qaradağ rayonu, Sədərək Ticarət Mərkəzi daxilində",40.330608,49.7836361,144,Sadarak@bankrespublika.az,Bazar ertəsi – Cümə: 9:00 - 17:30,Fevral 2023,050,baku

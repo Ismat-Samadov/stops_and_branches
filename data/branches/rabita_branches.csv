@@ -1,0 +1,32 @@
+id,name,short_address,address,latitude,longitude,working_hours,type
+128,Baş Ofis,,"Bakı şəh.,Nəsimi ray., Füzuli küç.71",40.37937983314103,49.84450178745809,Be-C : 09:00 - 21:00,network_branch
+129,Sahil filialı,Nərimanov m.,"Bakı şəh., Nərimanov ray.,Ə.Rəcəbli küç., 3",40.402812,49.868525,Be-C : 09:00 - 17:00,network_branch
+130,Nizami filialı,Bakı kinoteatrı,"Bakı şəh.,Xətai ray.,Sarayevo küç.26C",40.385775,49.9602,Be-C : 09:00 - 17:00,network_branch
+131,Nəsimi filialı,Heydər Əliyev sarayı,"Bakı şəh.,Nəsimi ray.,Bül-bül prospekti 30",40.37756723898722,49.843186381602976,Be-C : 09:00 - 17:00,network_branch
+258,KOB Mərkəzi,Əhməd Rəcəbli,"Bakı şəh.,Əhməd Rəcəbli 3/5",40.407419,49.861565,Be-C : 09:00 - 17:00,network_branch
+259,Kaspian filialı,Caspian Plaza,"Bakı şəh., Yasamal rayonu, C.Cabbarlı küç., bina 44, korpus1",40.3853403,49.8286822,Be-C : 09:00 - 17:00,network_branch
+260,Masallı filialı,Xətai Parkı,"Masallı rayonu, H.Əliyev pr. və H.Aslanov küç. kəsişməsi",39.025935,48.6649891,Be-C : 09:00 - 17:00,network_branch
+261,Qaradağ filialı,Gəmiqayırma zavodu,Salyan şossesi 83,40.259789054188076,49.65171487116394,Be-C : 09:00 - 17:00,network_branch
+262,Ağsu filialı,,"Ağsu şəh.,M.Ə.Rəsulzadə küç.,35",40.5674995,48.3914138,Be-C : 09:00 - 17:00,network_branch
+263,Nərimanov filialı,Funda klinika,"Bakı şəh., Nərimanov ray., İsmayıl Hidayətzadə küç., 49/51",40.3948169,49.8705495,Be-C : 09:00 - 17:00,network_branch
+264,Xətai filialı,Dəmirçi Plaza,"Bakı şəh.,Xətai ray,,Xocalı pr.,37",40.38287,49.871269,Be-C : 09:00 - 17:00,network_branch
+265,Ağcabədi filialı,,"Ağcabədi şəh, H.Əliyev pr.29",40.0497807,47.4599352,Be-C : 09:00 - 17:00,network_branch
+266,Şirvan filialı,,"Şirvan şəh.,M.Ə.Rəsulzadə küç.",39.955021,48.944633,Be-C : 09:00 - 17:00,network_branch
+267,Şəmkir filialı,,"Şəmkir şəh., Nizami küç., 144",40.830135,46.0237627,Be-C : 09:00 - 17:00,network_branch
+268,Mərkəz filialı,İçərişəhər metrosu,"Bakı şəh,Səbail ray., B.Sərdarov küç, 1",40.36702,49.83,Be-C : 09:00 - 17:00,network_branch
+269,Xaçmaz filialı,,"Xaçmaz şəh.,N.Nərimanov küç., 15",41.464403588901526,48.80207008137359,Be-C : 09:00 - 17:00,network_branch
+270,Qusar filialı,,"Qusar şəh.,Çingiz Qurbanov 18A",41.4305898,48.4383693,Be-C : 09:00 - 17:00,network_branch
+271,Səbail filialı,,"Bakı şəh,Nəsimi ray.,A.Mustafayev küç., 1D",40.40622953166509,49.812888896664745,Be-C : 09:00 - 17:00,network_branch
+272,Şamaxı filialı,,"Şamaxı şəh.,N.Nərimanov küç., 66",40.63751,48.63542,Be-C : 09:00 - 17:00,network_branch
+273,Gəncə filialı,,"Gəncə şəh., Heydər Əliyev pr. 273",40.69109067764315,46.36669081372618,Be-C : 09:00 - 17:00,network_branch
+274,Şəki filialı,,"Şəki şəh.,M.Rəsulzadə küç.178",41.20131,47.1776499,Be-C : 09:00 - 17:00,network_branch
+275,Quba filialı,,"Quba şəhəri, H.Əliyev pr. və T.Əhmədov küç. kəsişməsi",41.362279669812516,48.52866521998275,Be-C : 09:00 - 17:00,network_branch
+276,Kürdəmir filialı,,"Kürdəmir şəh.,H.Əliyev pr., 3-cü məhəllə 50",40.34626,48.15505,Be-C : 09:00 - 17:00,network_branch
+277,Lənkəran filialı,,"Lənkəran şəh., Müzəffər Nəsirli küçəsi, 11A",38.75260115858148,48.851648189585276,Be-C : 09:00 - 17:00,network_branch
+278,Sumqayıt filialı,,"Sumqayıt şəh., S.Vurğun küç, 102",40.59713,49.67478,Be-C : 09:00 - 17:00,network_branch
+279,Yasamal filialı,,"Bakı şəh.,Yasamal ray.,Şərifzadə küç.,408",40.3842506,49.8039883,Be-C : 09:00 - 17:00,network_branch
+280,Naxçıvan filialı,,"Naxçıvan şəh.,H.Əliyev pr.3/13",39.20972,45.4081799,Be-C : 09:00 - 17:00,network_branch
+2714,Tovuz filialı,,"Tovuz şəhəri, Sabir küçəsi 40",40.99017546598266,45.61964471041456,Be-C : 09:00 - 17:00,network_branch
+3444,Bərdə filialı,,"Bərdə şəhəri, Üzeyir Hacıbəyov küçəsi",40.374489,47.118984,Be-C : 09:00 - 17:00,network_branch
+3588,Xankəndi filialı,,"27 Nuru Paşa Küçəsi, Xankəndi 2600",39.8139286,46.751007,Be-C : 09:00 - 17:00,network_branch
+3590,Babək filialı,,"Babak Ave, Baku 1104",40.390879,49.906559,Be-C : 09:00 - 17:00,network_branch
