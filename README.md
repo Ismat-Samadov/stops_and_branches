@@ -257,7 +257,7 @@ Based on this analysis, the following actions are recommended for Bank of Baku l
 ## How to Regenerate Charts
 
 ```bash
-python generate_charts.py
+python scripts/generate_charts.py
 ```
 
 All charts will be saved to the `charts/` directory.
